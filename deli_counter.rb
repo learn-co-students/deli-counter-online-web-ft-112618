@@ -2,11 +2,13 @@ def line(katz_deli)
   if katz_deli == []
     puts "The line is currently empty."
   else
-    puts "The line is currently:"
+    arr = ["The line is currently:"]
     katz_deli.each_with_index do |name, index|
       x = index.to_i
-      puts "#{[x + 1]}. #{name}"
+      arr << "#{x + 1}. #{name}"
     end
+
+    puts arr.join(" ")
   end
 end
 
